@@ -112,8 +112,13 @@
                             </div>  
                             <div class="row">
                               <div class="col-12">
-                                <input type="submit" value="Send Message" class="btn btn-primary" >
+                                <input type="submit" onclick="myFunction()" value="Send Message" class="btn btn-primary" >              
                               <span class="submitting"></span>
+                              <script>
+                                function myFunction() {
+                                  alert("Message Sent!");
+                                }
+                                </script>
                               <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_next" value="https://aqiry.github.io/contact.html">
