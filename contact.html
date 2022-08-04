@@ -101,7 +101,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                               </div>
                             </div>
                             
@@ -112,11 +112,18 @@
                             </div>  
                             <div class="row">
                               <div class="col-12">
-                                <input type="submit" onclick="myFunction()" value="Send Message" class="btn btn-primary" >              
+                                <input type="submit" onclick="myFunction()" id="submit" value="Send Message" class="btn btn-primary" >              
                               <span class="submitting"></span>
                               <script>
                                 function myFunction() {
-                                  alert("Message Sent!");
+                                 if(document.getElementById('message').value &&
+                                  document.getElementById('name').value &&
+                                  document.getElementById('email').value){
+                                  document.getElementById('submit').style.backgroundColor = 'darkgreen';
+                                  }
+                                  else {
+                                  document.getElementById('submit').style.backgroundColor = 'red';
+                                  }
                                 }
                                 </script>
                               <input type="hidden" name="_captcha" value="false">
